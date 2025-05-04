@@ -80,8 +80,8 @@ def download_all_pollutants(date):
     for pol in POLLUTANTS:
         try:
             print(f"🔄 Traitement du polluant {pol}...")
-            print(f"Demande de génération du fichier {file_id}...")
             file_id = generate_file(date, pol)
+            print(f"Demande de génération du fichier {file_id}...")
             if file_id:
                 print(f"📁 ID du fichier : {file_id}")
                 download_file(file_id)
